@@ -1,0 +1,15 @@
+*.iml
+*.bak
+.DS_Store
+.idea
+.settings
+.parcel-cache
+.project
+.classpath
+dependency-reduced-pom.xml
+hs_err*
+gwt-unitCache
+node
+node_modules
+out
+target

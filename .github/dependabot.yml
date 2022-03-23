@@ -1,0 +1,32 @@
+version: 2
+updates:
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    ignore:
+      - dependency-name: "com.google.elemental2:*"
+        versions: ["*"]
+      - dependency-name: "com.google.guava:guava"
+        versions: ["*"]
+
+  - package-ecosystem: "npm"
+    directory: "/crysknife"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/gwt"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/j2cl"
+    schedule:
+      interval: "daily"

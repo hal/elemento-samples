@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+     Copyright 2022 Red Hat
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+         https://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jboss</groupId>
+        <artifactId>jboss-parent</artifactId>
+        <version>39</version>
+    </parent>
+
+    <groupId>org.jboss.elemento.samples</groupId>
+    <artifactId>elemento-samples</artifactId>
+    <version>1.0.7</version>
+    <name>Elemento Samples</name>
+    <packaging>pom</packaging>
+    <inceptionYear>2022</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Red Hat</name>
+        <url>https://developers.redhat.com/</url>
+    </organization>
+
+    <scm>
+        <connection>scm:git:${repo.scm.connection}</connection>
+        <developerConnection>scm:git:${repo.scm.connection}</developerConnection>
+        <url>${repo.scm.url}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <properties>
+        <!-- Dependency versions -->
+        <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
+        <version.crysknife>0.2</version.crysknife>
+        <version.elemento>1.0.7</version.elemento>
+        <version.gwt.com>2.9.0</version.gwt.com>
+        <version.gwt.project>1.0.0-RC1</version.gwt.project>
+        <version.node>v16.14.0</version.node>
+
+        <!-- Plugin versions -->
+        <version.checkstyle.plugin>3.1.1</version.checkstyle.plugin>
+        <version.enforcer.plugin>3.0.0-M3</version.enforcer.plugin>
+        <version.frontend.plugin>1.12.1</version.frontend.plugin>
+        <version.formatter.plugin>2.17.0</version.formatter.plugin>
+        <version.gwt.maven.plugin>1.0.0</version.gwt.maven.plugin>
+        <version.impsort.plugin>1.6.2</version.impsort.plugin>
+        <version.j2cl.plugin>0.19</version.j2cl.plugin>
+        <version.license.plugin>4.1</version.license.plugin>
+
+        <!-- Repos, URLs & protocols -->
+        <repo.scm.connection>git@github.com:hal/elemento-samples.git</repo.scm.connection>
+        <repo.scm.url>https://github.com/hal/elemento-samples</repo.scm.url>
+
+        <!-- Build related -->
+        <encoding>UTF-8</encoding>
+        <gwt.draftCompile>true</gwt.draftCompile>
+        <gwt.style>DETAILED</gwt.style>
+        <java.version>11</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.min.version>3.2.5</maven.min.version>
+        <npm.script>dev</npm.script>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+    </properties>
+
+    <modules>
+        <module>bom</module>
+<!--        <module>crysknife</module>-->
+        <module>build-config</module>
+        <module>dist</module>
+        <module>gwt</module>
+        <module>samples-parent</module>
+        <module>j2cl</module>
+    </modules>
+
+    <!-- No dependencies! Dependencies are managed in core-parent -->
+    <dependencies/>
+
+    <build>
+        <!--
+            All plugins are declared and (partly) configured here.
+            Some of them are redefined in core-parent
+        -->
+        <pluginManagement>
+            <plugins>
+                <!-- Ordered by artifactID -->
+                <plugin>
+                    <groupId>com.github.eirslett</groupId>
+                    <artifactId>frontend-maven-plugin</artifactId>
+                    <version>${version.frontend.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.revelc.code.formatter</groupId>
+                    <artifactId>formatter-maven-plugin</artifactId>
+                    <version>${version.formatter.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.ltgt.gwt.maven</groupId>
+                    <artifactId>gwt-maven-plugin</artifactId>
+                    <version>${version.gwt.plugin}</version>
+                    <extensions>true</extensions>
+                </plugin>
+                <plugin>
+                    <groupId>com.vertispan.j2cl</groupId>
+                    <artifactId>j2cl-maven-plugin</artifactId>
+                    <version>${version.j2cl.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.mycila</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>${version.license.plugin}</version>
+                    <configuration>
+                        <header>build-config/src/main/resources/etc/license.txt</header>
+                        <strictCheck>true</strictCheck>
+                        <aggregate>true</aggregate>
+                        <useDefaultExcludes>true</useDefaultExcludes>
+                        <excludes>
+                            <exclude>.sdkmanrc</exclude>
+                            <exclude>version.txt</exclude>
+                            <exclude>LICENSE</exclude>
+                            <exclude>README.md</exclude>
+                            <exclude>**/.parcel-cache/**</exclude>
+                            <exclude>**/*license*.txt</exclude>
+                        </excludes>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>net.revelc.code</groupId>
+                    <artifactId>impsort-maven-plugin</artifactId>
+                    <version>${version.impsort.plugin}</version>
+                    <configuration>
+                        <groups>java.,javax.,org.,io.,com.</groups>
+                        <removeUnused>true</removeUnused>
+                        <staticAfter>true</staticAfter>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-checkstyle-plugin</artifactId>
+                    <configuration>
+                        <configLocation>wildfly-checkstyle/checkstyle.xml</configLocation>
+                        <consoleOutput>true</consoleOutput>
+                        <failsOnError>true</failsOnError>
+                        <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                        <excludes>**/*$logger.java,**/*$bundle.java</excludes>
+                        <useFile/>
+                    </configuration>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.wildfly.checkstyle</groupId>
+                            <artifactId>wildfly-checkstyle-config</artifactId>
+                            <version>${version.checkstyle.config}</version>
+                        </dependency>
+                    </dependencies>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-enforcer-plugin</artifactId>
+                    <configuration>
+                        <rules>
+                            <bannedRepositories>
+                                <message>To build this project, don't use maven repositories over HTTP. Please use HTTPS
+                                    in your settings.xml or run the build with property insecure.repositories=WARN
+                                </message>
+                                <level>ERROR</level>
+                                <bannedRepositories>
+                                    <bannedRepository>http://*</bannedRepository>
+                                </bannedRepositories>
+                                <bannedPluginRepositories>
+                                    <bannedPluginRepository>http://*</bannedPluginRepository>
+                                </bannedPluginRepositories>
+                            </bannedRepositories>
+                            <requireMavenVersion>
+                                <message>To build this project Maven ${maven.min.version} (or greater) is required.
+                                    Please install it.
+                                </message>
+                                <version>${maven.min.version}</version>
+                            </requireMavenVersion>
+                            <requireJavaVersion>
+                                <message>To build this project JDK ${maven.compiler.source} (or greater) is required.
+                                    Please install it.
+                                </message>
+                                <version>${maven.compiler.source}</version>
+                            </requireJavaVersion>
+                        </rules>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!-- Ordered by artifactID -->
+            <plugin>
+                <groupId>com.mycila</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>license-format</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>license-check</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-enforcer-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforcer-enforce</id>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <gwt.draftCompile>false</gwt.draftCompile>
+                <gwt.style>OBFUSCATED</gwt.style>
+                <npm.script>prod</npm.script>
+            </properties>
+        </profile>
+    </profiles>
+</project>
