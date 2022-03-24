@@ -140,6 +140,9 @@
                         <strictCheck>true</strictCheck>
                         <aggregate>true</aggregate>
                         <useDefaultExcludes>true</useDefaultExcludes>
+                        <mapping>
+                            <parcelrc>DOUBLESLASH_STYLE</parcelrc>
+                        </mapping>
                         <excludes>
                             <exclude>.sdkmanrc</exclude>
                             <exclude>version.txt</exclude>
