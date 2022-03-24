@@ -103,3 +103,5 @@ setup_colors
 msg "Update version to ${CYAN}${NEW_VERSION}${NOFORMAT}"
 mvn --quiet versions:set -DnewVersion="${NEW_VERSION}" &> /dev/null
 msg "    ${YELLOW}✓${NOFORMAT} Maven POMs"
+sed -i '' "s/<version\.elemento>.*<\/version\.elemento>/<version\.elemento>$NEW_VERSION<\/version\.elemento>/" pom.xml
+msg "    ${YELLOW}✓${NOFORMAT} Elemento"
