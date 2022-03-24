@@ -8,8 +8,8 @@
   ],
   "source": "src/web/index.html",
   "scripts": {
-    "watch": "parcel serve --dist-dir target/samples --open",
-    "build": "parcel build --dist-dir target/samples"
+    "watch": "parcel serve --public-url \"./\" --dist-dir target/samples --open",
+    "build": "parcel build --public-url \"./\" --dist-dir target/samples"
   },
   "devDependencies": {
     "@parcel/reporter-cli": "^2.4.0",
