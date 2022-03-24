@@ -10,14 +10,14 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    ignore:
-      - dependency-name: "com.google.elemental2:*"
-        versions: ["*"]
-      - dependency-name: "com.google.guava:guava"
-        versions: ["*"]
 
   - package-ecosystem: "npm"
     directory: "/crysknife"
+    schedule:
+      interval: "daily"
+
+  - package-ecosystem: "npm"
+    directory: "/dist"
     schedule:
       interval: "daily"
 
