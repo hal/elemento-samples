@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.5
+Built-By: runner
+Build-Jdk: 11.0.14.1
+Specification-Title: Elemento Samples :: GWT
+Specification-Version: 1.0
+Specification-Vendor: Red Hat
+Implementation-Title: Elemento Samples :: GWT
+Implementation-Version: 1.0.7
+Implementation-Vendor-Id: org.jboss.elemento.samples
+Implementation-Vendor: Red Hat
+Implementation-URL: http://www.jboss.org/elemento-samples/elemento-sampl
+ es-parent/elemento-samples-gwt
+Java-Vendor: Eclipse Adoptium
+Java-Version: 11
+Os-Arch: amd64
+Os-Name: Linux
+Os-Version: 5.11.0-1028-azure
+Scm-Connection: scm:git:git@github.com:hal/elemento-samples.git/elemento
+ -samples-parent/elemento-samples-gwt
+Scm-Revision: c6db0362e0d704af6e2e4194dc1662d7a1ac53ad
+Scm-Url: https://github.com/hal/elemento-samples/elemento-samples-parent
+ /elemento-samples-gwt
+
