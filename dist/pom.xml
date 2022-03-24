@@ -31,13 +31,11 @@
     <description>Collects all samples in one distribution</description>
 
     <dependencies>
-<!--
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>elemento-samples-crysknife</artifactId>
             <classifier>resources</classifier>
         </dependency>
--->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>elemento-samples-gwt</artifactId>
@@ -100,7 +98,6 @@
                         </goals>
                         <configuration>
                             <artifactItems>
-<!--
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>elemento-samples-crysknife</artifactId>
@@ -110,7 +107,6 @@
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/samples/crysknife</outputDirectory>
                                 </artifactItem>
--->
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
                                     <artifactId>elemento-samples-gwt</artifactId>
