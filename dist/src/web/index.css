@@ -15,3 +15,24 @@
  */
 @import "/node_modules/todomvc-common/base.css";
 @import "/node_modules/todomvc-app-css/index.css";
+
+a {
+    color: #b83f45;
+}
+
+.todoapp {
+    margin-top: 330px;
+}
+
+.todoapp h1 {
+    line-height: 80px;
+    top: -340px;
+}
+
+.intro p {
+    font-size: 20px;
+    font-weight: 200;
+    position: absolute;
+    text-align: center;
+    top: -100px;
+}

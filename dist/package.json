@@ -1,15 +1,15 @@
 {
-  "name": "elemento-samples-j2cl",
-  "description": "J2CL Elemento Sample",
+  "name": "elemento-samples",
+  "description": "Elemento Samples",
   "private": true,
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "parcelIgnore": [
-    "todo.j2cl.js"
+    "crysknife\/.*", "gwt\/.*", "j2cl\/.*"
   ],
   "source": "src/web/index.html",
   "scripts": {
-    "watch": "parcel serve --dist-dir target/todo --open",
-    "build": "parcel build --dist-dir target/todo"
+    "watch": "parcel serve --dist-dir target/samples --open",
+    "build": "parcel build --dist-dir target/samples"
   },
   "devDependencies": {
     "@parcel/reporter-cli": "^2.4.0",
