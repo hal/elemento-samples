@@ -22,7 +22,7 @@
     <parent>
         <groupId>org.jboss.elemento.samples</groupId>
         <artifactId>elemento-samples-parent</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
         <relativePath>../samples-parent/pom.xml</relativePath>
     </parent>
 
@@ -40,7 +40,12 @@
 -->
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>elemento-samples-gwt</artifactId>
+            <artifactId>elemento-samples-gwtcom</artifactId>
+            <classifier>resources</classifier>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>elemento-samples-gwtproject</artifactId>
             <classifier>resources</classifier>
         </dependency>
         <dependency>
@@ -113,12 +118,21 @@
 -->
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
-                                    <artifactId>elemento-samples-gwt</artifactId>
+                                    <artifactId>elemento-samples-gwtcom</artifactId>
                                     <classifier>resources</classifier>
                                     <version>${project.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/samples/gwt</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/samples/gwtcom</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>elemento-samples-gwtproject</artifactId>
+                                    <classifier>resources</classifier>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/samples/gwtproject</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>

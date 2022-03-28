@@ -24,26 +24,28 @@
     <parent>
         <groupId>org.jboss.elemento.samples</groupId>
         <artifactId>elemento-samples-parent</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
         <relativePath>../samples-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>elemento-samples-gwt</artifactId>
-    <name>Elemento Samples :: GWT</name>
+    <artifactId>elemento-samples-gwtcom</artifactId>
+    <name>Elemento Samples :: GWT.com</name>
     <packaging>gwt-app</packaging>
 
     <dependencies>
         <dependency>
             <groupId>org.jboss.elemento</groupId>
             <artifactId>elemento-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-dev</artifactId>
+            <version>${version.elemento}-gwtcom</version>
         </dependency>
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
+        </dependency>
+        <!-- Needed by the GWT maven plugin -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
         </dependency>
     </dependencies>
 

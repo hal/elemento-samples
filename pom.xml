@@ -15,7 +15,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 
-
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -29,7 +28,7 @@
 
     <groupId>org.jboss.elemento.samples</groupId>
     <artifactId>elemento-samples</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <name>Elemento Samples</name>
     <packaging>pom</packaging>
     <inceptionYear>2022</inceptionYear>
@@ -58,7 +57,7 @@
         <!-- Dependency versions -->
         <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
         <version.crysknife>0.2</version.crysknife>
-        <version.elemento>1.0.7</version.elemento>
+        <version.elemento>1.0.8</version.elemento>
         <version.gwt.com>2.9.0</version.gwt.com>
         <version.gwt.project>1.0.0-RC1</version.gwt.project>
         <version.node>v16.14.0</version.node>
@@ -95,7 +94,8 @@
 <!--        <module>crysknife</module>-->
         <module>build-config</module>
         <module>dist</module>
-        <module>gwt</module>
+        <module>gwtcom</module>
+        <module>gwtproject</module>
         <module>samples-parent</module>
         <module>j2cl</module>
     </modules>

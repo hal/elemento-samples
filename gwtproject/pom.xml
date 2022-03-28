@@ -28,8 +28,9 @@
         <relativePath>../samples-parent/pom.xml</relativePath>
     </parent>
 
-    <artifactId>elemento-samples-j2cl</artifactId>
-    <name>Elemento Samples :: J2CL</name>
+    <artifactId>elemento-samples-gwtproject</artifactId>
+    <name>Elemento Samples :: GWT Project</name>
+    <packaging>gwt-app</packaging>
 
     <dependencies>
         <dependency>
@@ -39,6 +40,15 @@
         <dependency>
             <groupId>org.gwtproject.core</groupId>
             <artifactId>gwt-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+        </dependency>
+        <!-- Needed by the GWT maven plugin -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
         </dependency>
     </dependencies>
 
@@ -75,25 +85,25 @@
                             <goal>npm</goal>
                         </goals>
                         <configuration>
-                            <arguments>run build</arguments>
+                            <arguments>run ${npm.script}</arguments>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
             <plugin>
-                <groupId>com.vertispan.j2cl</groupId>
-                <artifactId>j2cl-maven-plugin</artifactId>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
                 <configuration>
-                    <initialScriptFilename>todo.j2cl.js</initialScriptFilename>
-                    <webappDirectory>${project.build.directory}/todo</webappDirectory>
+                    <devmodeArgs>
+                        <devmodeArg>-startupUrl</devmodeArg>
+                        <devmodeArg>todo/index.html</devmodeArg>
+                    </devmodeArgs>
+                    <draftCompile>${gwt.draftCompile}</draftCompile>
+                    <moduleName>org.jboss.elemento.sample.gwt.Todo</moduleName>
+                    <moduleShortName>todo</moduleShortName>
+                    <sourceLevel>${java.version}</sourceLevel>
+                    <style>${gwt.style}</style>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

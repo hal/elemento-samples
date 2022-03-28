@@ -1,6 +1,6 @@
 # Elemento GWT Sample
 
-[TodoMVC](http://todomvc.com/) implementation based on GWT. 
+[TodoMVC](http://todomvc.com/) implementation based on GWT project. 
 
 The sample uses a mixture of GWT dev mode and NPM / Parcel: 
 
