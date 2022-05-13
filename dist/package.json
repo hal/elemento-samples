@@ -14,7 +14,7 @@
   "devDependencies": {
     "@parcel/reporter-cli": "^2.5.0",
     "parcel": "^2.5.0",
-    "parcel-resolver-ignore": "^2.0.0"
+    "parcel-resolver-ignore": "^2.1.0"
   },
   "dependencies": {
     "todomvc-app-css": "^2.4.2",
