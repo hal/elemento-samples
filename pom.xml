@@ -69,7 +69,7 @@
         <version.formatter.plugin>2.19.0</version.formatter.plugin>
         <version.gwt.maven.plugin>1.0.1</version.gwt.maven.plugin>
         <version.impsort.plugin>1.7.0</version.impsort.plugin>
-        <version.j2cl.plugin>0.19</version.j2cl.plugin>
+        <version.j2cl.plugin>0.20</version.j2cl.plugin>
         <version.license.plugin>4.1</version.license.plugin>
 
         <!-- Repos, URLs & protocols -->
