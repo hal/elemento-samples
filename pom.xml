@@ -56,7 +56,7 @@
     <properties>
         <!-- Dependency versions -->
         <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
-        <version.elemento>1</version.elemento>
+        <version.elemento>1.0.10</version.elemento>
         <version.gwt.com>2.10.0</version.gwt.com>
         <version.gwt.project>1.0.0-RC1</version.gwt.project>
         <version.node>v16.14.0</version.node>

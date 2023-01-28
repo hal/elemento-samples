@@ -29,7 +29,6 @@
     <artifactId>elemento-samples-dist</artifactId>
     <name>Elemento Samples :: Distribution</name>
     <description>Collects all samples in one distribution</description>
-    <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
@@ -122,6 +121,13 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
                     <skipIfEmpty>true</skipIfEmpty>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
