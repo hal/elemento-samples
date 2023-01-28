@@ -22,30 +22,19 @@
     <parent>
         <groupId>org.jboss.elemento.samples</groupId>
         <artifactId>elemento-samples-parent</artifactId>
-        <version>1.0.10</version>
+        <version>1</version>
         <relativePath>../samples-parent/pom.xml</relativePath>
     </parent>
 
     <artifactId>elemento-samples-dist</artifactId>
     <name>Elemento Samples :: Distribution</name>
     <description>Collects all samples in one distribution</description>
+    <packaging>jar</packaging>
 
     <dependencies>
-<!--
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>elemento-samples-crysknife</artifactId>
-            <classifier>resources</classifier>
-        </dependency>
--->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>elemento-samples-gwtcom</artifactId>
-            <classifier>resources</classifier>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>elemento-samples-gwtproject</artifactId>
+            <artifactId>elemento-samples-gwt</artifactId>
             <classifier>resources</classifier>
         </dependency>
         <dependency>
@@ -105,34 +94,14 @@
                         </goals>
                         <configuration>
                             <artifactItems>
-<!--
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>
-                                    <artifactId>elemento-samples-crysknife</artifactId>
+                                    <artifactId>elemento-samples-gwt</artifactId>
                                     <classifier>resources</classifier>
                                     <version>${project.version}</version>
                                     <type>jar</type>
                                     <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/samples/crysknife</outputDirectory>
-                                </artifactItem>
--->
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>elemento-samples-gwtcom</artifactId>
-                                    <classifier>resources</classifier>
-                                    <version>${project.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/samples/gwtcom</outputDirectory>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>elemento-samples-gwtproject</artifactId>
-                                    <classifier>resources</classifier>
-                                    <version>${project.version}</version>
-                                    <type>jar</type>
-                                    <overWrite>true</overWrite>
-                                    <outputDirectory>${project.build.directory}/samples/gwtproject</outputDirectory>
+                                    <outputDirectory>${project.build.directory}/samples/gwt</outputDirectory>
                                 </artifactItem>
                                 <artifactItem>
                                     <groupId>${project.groupId}</groupId>

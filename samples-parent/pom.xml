@@ -23,7 +23,7 @@
     <parent>
         <groupId>org.jboss.elemento.samples</groupId>
         <artifactId>elemento-samples</artifactId>
-        <version>1.0.10</version>
+        <version>1</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -48,35 +48,6 @@
                 <groupId>org.jboss.elemento</groupId>
                 <artifactId>elemento-core</artifactId>
                 <version>${version.elemento}</version>
-            </dependency>
-
-            <!-- Crysknife -->
-            <dependency>
-                <groupId>io.crysknife</groupId>
-                <artifactId>crysknife-annotations</artifactId>
-                <version>${version.crysknife}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.crysknife</groupId>
-                <artifactId>crysknife-core</artifactId>
-                <version>${version.crysknife}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.crysknife</groupId>
-                <artifactId>crysknife-processor</artifactId>
-                <version>${version.crysknife}</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.crysknife</groupId>
-                <artifactId>templates-api</artifactId>
-                <version>${version.crysknife}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.crysknife</groupId>
-                <artifactId>templates-generator</artifactId>
-                <version>${version.crysknife}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- GWT -->

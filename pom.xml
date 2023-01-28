@@ -28,7 +28,7 @@
 
     <groupId>org.jboss.elemento.samples</groupId>
     <artifactId>elemento-samples</artifactId>
-    <version>1.0.10</version>
+    <version>1</version>
     <name>Elemento Samples</name>
     <packaging>pom</packaging>
     <inceptionYear>2022</inceptionYear>
@@ -56,8 +56,7 @@
     <properties>
         <!-- Dependency versions -->
         <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
-        <version.crysknife>0.2</version.crysknife>
-        <version.elemento>1.0.10</version.elemento>
+        <version.elemento>1</version.elemento>
         <version.gwt.com>2.10.0</version.gwt.com>
         <version.gwt.project>1.0.0-RC1</version.gwt.project>
         <version.node>v16.14.0</version.node>
@@ -91,11 +90,9 @@
 
     <modules>
         <module>bom</module>
-<!--        <module>crysknife</module>-->
         <module>build-config</module>
         <module>dist</module>
-        <module>gwtcom</module>
-        <module>gwtproject</module>
+        <module>gwt</module>
         <module>samples-parent</module>
         <module>j2cl</module>
     </modules>
