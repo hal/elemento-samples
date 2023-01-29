@@ -3,10 +3,10 @@ Created-By: Apache Maven 3.8.5
 Built-By: runner
 Build-Jdk: 11.0.17
 Specification-Title: Elemento Samples :: J2CL
-Specification-Version: 1.0
+Specification-Version: 2.0
 Specification-Vendor: Red Hat
 Implementation-Title: Elemento Samples :: J2CL
-Implementation-Version: 1
+Implementation-Version: 2
 Implementation-Vendor-Id: org.jboss.elemento.samples
 Implementation-Vendor: Red Hat
 Implementation-URL: http://www.jboss.org/elemento-samples/elemento-sampl
@@ -18,7 +18,7 @@ Os-Name: Linux
 Os-Version: 5.15.0-1031-azure
 Scm-Connection: scm:git:git@github.com:hal/elemento-samples.git/elemento
  -samples-parent/elemento-samples-j2cl
-Scm-Revision: 66b0a14eecb7ed8ca6507b26c3cc31db11016775
+Scm-Revision: d0a7b3f31e890a75f516981a682a7c80e79a9a12
 Scm-Url: https://github.com/hal/elemento-samples/elemento-samples-parent
  /elemento-samples-j2cl
 
