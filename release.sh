@@ -102,7 +102,7 @@ parse_params() {
 is_semver() {
     local version
     version="$1"
-    if [[ ! ${version} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    if [[ ! ${version} =~ ^[0-9]+(\.[0-9]+\.[0-9]+$)? ]]; then
         return 1
     fi
 }
