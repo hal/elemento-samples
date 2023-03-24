@@ -69,7 +69,7 @@
         <version.gwt.maven.plugin>1.0.1</version.gwt.maven.plugin>
         <version.impsort.plugin>1.8.0</version.impsort.plugin>
         <version.j2cl.plugin>0.20</version.j2cl.plugin>
-        <version.license.plugin>4.1</version.license.plugin>
+        <version.license.plugin>4.2</version.license.plugin>
 
         <!-- Repos, URLs & protocols -->
         <repo.scm.connection>git@github.com:hal/elemento-samples.git</repo.scm.connection>
