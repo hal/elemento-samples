@@ -57,13 +57,13 @@
         <!-- Dependency versions -->
         <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
         <version.elemento>1.0.11</version.elemento>
-        <version.gwt.com>2.10.0</version.gwt.com>
-        <version.gwt.project>1.0.0-RC1</version.gwt.project>
-        <version.node>v16.14.0</version.node>
+        <version.gwt>2.10.0</version.gwt>
+        <version.gwt.core>1.0.0-RC1</version.gwt.core>
+        <version.node>v20.5.0</version.node>
 
         <!-- Plugin versions -->
-        <version.checkstyle.plugin>3.1.1</version.checkstyle.plugin>
-        <version.enforcer.plugin>3.0.0-M3</version.enforcer.plugin>
+        <version.checkstyle.plugin>3.3.0</version.checkstyle.plugin>
+        <version.enforcer.plugin>3.3.0</version.enforcer.plugin>
         <version.frontend.plugin>1.13.4</version.frontend.plugin>
         <version.formatter.plugin>2.23.0</version.formatter.plugin>
         <version.gwt.maven.plugin>1.0.1</version.gwt.maven.plugin>
@@ -79,7 +79,7 @@
         <encoding>UTF-8</encoding>
         <gwt.draftCompile>true</gwt.draftCompile>
         <gwt.style>DETAILED</gwt.style>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.min.version>3.2.5</maven.min.version>
@@ -134,21 +134,24 @@
                     <artifactId>license-maven-plugin</artifactId>
                     <version>${version.license.plugin}</version>
                     <configuration>
-                        <header>build-config/src/main/resources/etc/license.txt</header>
-                        <strictCheck>true</strictCheck>
                         <aggregate>true</aggregate>
+                        <strictCheck>true</strictCheck>
                         <useDefaultExcludes>true</useDefaultExcludes>
                         <mapping>
                             <parcelrc>DOUBLESLASH_STYLE</parcelrc>
                         </mapping>
-                        <excludes>
-                            <exclude>.sdkmanrc</exclude>
-                            <exclude>version.txt</exclude>
-                            <exclude>LICENSE</exclude>
-                            <exclude>README.md</exclude>
-                            <exclude>**/.parcel-cache/**</exclude>
-                            <exclude>**/*license*.txt</exclude>
-                        </excludes>
+                        <licenseSets>
+                            <licenseSet>
+                                <header>build-config/src/main/resources/etc/license.txt</header>
+                                <excludes>
+                                    <exclude>version.txt</exclude>
+                                    <exclude>LICENSE</exclude>
+                                    <exclude>README.md</exclude>
+                                    <exclude>**/.parcel-cache/**</exclude>
+                                    <exclude>**/*license*.txt</exclude>
+                                </excludes>
+                            </licenseSet>
+                        </licenseSets>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -156,7 +159,7 @@
                     <artifactId>impsort-maven-plugin</artifactId>
                     <version>${version.impsort.plugin}</version>
                     <configuration>
-                        <groups>java.,javax.,org.,io.,com.</groups>
+                        <groups>java.,javax.,jakarta.,org.,io.,com.</groups>
                         <removeUnused>true</removeUnused>
                         <staticAfter>true</staticAfter>
                     </configuration>

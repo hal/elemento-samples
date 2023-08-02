@@ -42,12 +42,11 @@
             <artifactId>gwt-core</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.google.gwt</groupId>
+            <groupId>org.gwtproject</groupId>
             <artifactId>gwt-user</artifactId>
         </dependency>
-        <!-- Needed by the GWT maven plugin -->
         <dependency>
-            <groupId>com.google.gwt</groupId>
+            <groupId>org.gwtproject</groupId>
             <artifactId>gwt-dev</artifactId>
         </dependency>
     </dependencies>
@@ -101,7 +100,7 @@
                     <draftCompile>${gwt.draftCompile}</draftCompile>
                     <moduleName>org.jboss.elemento.sample.gwt.Todo</moduleName>
                     <moduleShortName>todo</moduleShortName>
-                    <sourceLevel>${java.version}</sourceLevel>
+                    <sourceLevel>auto</sourceLevel>
                     <style>${gwt.style}</style>
                 </configuration>
             </plugin>

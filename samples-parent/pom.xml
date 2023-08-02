@@ -52,16 +52,21 @@
 
             <!-- GWT -->
             <dependency>
-                <groupId>com.google.gwt</groupId>
+                <groupId>org.gwtproject</groupId>
                 <artifactId>gwt</artifactId>
-                <version>${version.gwt.com}</version>
+                <version>${version.gwt}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.gwtproject.core</groupId>
                 <artifactId>gwt-core</artifactId>
-                <version>${version.gwt.project}</version>
+                <version>${version.gwt.core}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.gwtproject</groupId>
+                <artifactId>gwt-user</artifactId>
+                <version>${version.gwt}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -94,7 +99,11 @@
                     <groupId>com.mycila</groupId>
                     <artifactId>license-maven-plugin</artifactId>
                     <configuration>
-                        <header>etc/license.txt</header>
+                        <licenseSets>
+                            <licenseSet>
+                                <header>etc/license.txt</header>
+                            </licenseSet>
+                        </licenseSets>
                     </configuration>
                     <dependencies>
                         <dependency>
