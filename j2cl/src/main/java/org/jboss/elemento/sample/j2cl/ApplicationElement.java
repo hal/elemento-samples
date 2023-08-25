@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.jboss.elemento.By;
-import org.jboss.elemento.HtmlContentBuilder;
+import org.jboss.elemento.HtmlContainerBuilder;
 import org.jboss.elemento.IsElement;
 import org.jboss.elemento.Key;
 
@@ -30,7 +30,24 @@ import elemental2.dom.HTMLElement;
 import elemental2.dom.HTMLInputElement;
 import elemental2.dom.HTMLUListElement;
 
-import static org.jboss.elemento.Elements.*;
+import static org.jboss.elemento.Elements.a;
+import static org.jboss.elemento.Elements.button;
+import static org.jboss.elemento.Elements.children;
+import static org.jboss.elemento.Elements.find;
+import static org.jboss.elemento.Elements.footer;
+import static org.jboss.elemento.Elements.h;
+import static org.jboss.elemento.Elements.header;
+import static org.jboss.elemento.Elements.innerHtml;
+import static org.jboss.elemento.Elements.input;
+import static org.jboss.elemento.Elements.iterator;
+import static org.jboss.elemento.Elements.label;
+import static org.jboss.elemento.Elements.li;
+import static org.jboss.elemento.Elements.removeChildrenFrom;
+import static org.jboss.elemento.Elements.section;
+import static org.jboss.elemento.Elements.setVisible;
+import static org.jboss.elemento.Elements.span;
+import static org.jboss.elemento.Elements.toggle;
+import static org.jboss.elemento.Elements.ul;
 import static org.jboss.elemento.EventType.bind;
 import static org.jboss.elemento.EventType.change;
 import static org.jboss.elemento.EventType.click;
@@ -49,7 +66,7 @@ class ApplicationElement implements IsElement<HTMLElement> {
     private final HTMLInputElement newTodo;
     private final HTMLElement main;
     private final HTMLInputElement toggleAll;
-    private final HtmlContentBuilder<HTMLUListElement> list;
+    private final HtmlContainerBuilder<HTMLUListElement> list;
     private final HTMLElement footer;
     private final HTMLElement count;
     private final HTMLElement filterAll;
