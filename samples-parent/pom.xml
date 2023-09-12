@@ -46,8 +46,10 @@
             <!-- Elemento -->
             <dependency>
                 <groupId>org.jboss.elemento</groupId>
-                <artifactId>elemento-core</artifactId>
+                <artifactId>elemento-bom</artifactId>
                 <version>${version.elemento}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- GWT -->

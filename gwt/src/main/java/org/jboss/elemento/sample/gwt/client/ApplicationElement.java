@@ -20,7 +20,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.jboss.elemento.By;
-import org.jboss.elemento.HtmlContainerBuilder;
+import org.jboss.elemento.HTMLContainerBuilder;
 import org.jboss.elemento.IsElement;
 import org.jboss.elemento.Key;
 
@@ -66,7 +66,7 @@ class ApplicationElement implements IsElement<HTMLElement> {
     private final HTMLInputElement newTodo;
     private final HTMLElement main;
     private final HTMLInputElement toggleAll;
-    private final HtmlContainerBuilder<HTMLUListElement> list;
+    private final HTMLContainerBuilder<HTMLUListElement> list;
     private final HTMLElement footer;
     private final HTMLElement count;
     private final HTMLElement filterAll;
