@@ -15,12 +15,12 @@ jobs:
     steps:
       - name: Checkout
         id: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up JDK
         id: setup-jdk
         uses: actions/setup-java@v3
         with:
-          java-version: 17
+          java-version: 11
           distribution: temurin
           cache: maven
       - name: Package

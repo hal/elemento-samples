@@ -104,7 +104,7 @@
         <module>dist</module>
         <module>gwt</module>
         <module>samples-parent</module>
-        <module>j2cl</module>
+<!--        <module>j2cl</module>-->
     </modules>
 
     <!-- No dependencies! Dependencies are managed in samples-parent -->
