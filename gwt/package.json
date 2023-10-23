@@ -18,7 +18,7 @@
     "parcel-resolver-ignore": "^2.1.5"
   },
   "dependencies": {
-    "todomvc-app-css": "^2.4.2",
+    "todomvc-app-css": "^2.4.3",
     "todomvc-common": "^1.0.5"
   }
 }
