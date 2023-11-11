@@ -92,12 +92,6 @@
                     </dependencies>
                 </plugin>
                 <plugin>
-                    <groupId>net.ltgt.gwt.maven</groupId>
-                    <artifactId>gwt-maven-plugin</artifactId>
-                    <version>${version.gwt.maven.plugin}</version>
-                    <extensions>true</extensions>
-                </plugin>
-                <plugin>
                     <groupId>com.mycila</groupId>
                     <artifactId>license-maven-plugin</artifactId>
                     <configuration>

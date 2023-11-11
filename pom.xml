@@ -66,20 +66,20 @@
     <properties>
         <!-- Dependency versions -->
         <version.checkstyle.config>1.0.8.Final</version.checkstyle.config>
-        <version.elemento>1.2.0</version.elemento>
+        <version.elemento>1.2.7</version.elemento>
         <version.gwt>2.10.0</version.gwt>
         <version.gwt.core>1.0.0-RC1</version.gwt.core>
-        <version.node>v20.5.0</version.node>
+        <version.node>v20.8.1</version.node>
 
         <!-- Plugin versions -->
         <version.checkstyle.plugin>3.3.0</version.checkstyle.plugin>
         <version.enforcer.plugin>3.3.0</version.enforcer.plugin>
-        <version.frontend.plugin>1.13.4</version.frontend.plugin>
+        <version.frontend.plugin>1.14.0</version.frontend.plugin>
         <version.formatter.plugin>2.23.0</version.formatter.plugin>
-        <version.gwt.maven.plugin>1.0.1</version.gwt.maven.plugin>
+        <version.gwt.plugin>1.1.0</version.gwt.plugin>
         <version.impsort.plugin>1.9.0</version.impsort.plugin>
-        <version.j2cl.plugin>0.21.0</version.j2cl.plugin>
-        <version.license.plugin>4.2</version.license.plugin>
+        <version.j2cl.plugin>0.22.0</version.j2cl.plugin>
+        <version.license.plugin>4.3</version.license.plugin>
 
         <!-- Repos, URLs & protocols -->
         <repo.scm.connection>git@github.com:hal/elemento-samples.git</repo.scm.connection>
@@ -104,7 +104,7 @@
         <module>dist</module>
         <module>gwt</module>
         <module>samples-parent</module>
-<!--        <module>j2cl</module>-->
+        <module>j2cl</module>
     </modules>
 
     <!-- No dependencies! Dependencies are managed in samples-parent -->
@@ -131,7 +131,7 @@
                 <plugin>
                     <groupId>net.ltgt.gwt.maven</groupId>
                     <artifactId>gwt-maven-plugin</artifactId>
-                    <version>${version.gwt.maven.plugin}</version>
+                    <version>${version.gwt.plugin}</version>
                     <extensions>true</extensions>
                 </plugin>
                 <plugin>
@@ -265,6 +265,19 @@
             </plugin>
         </plugins>
     </build>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>j2cl-staging</id>
+            <url>https://oss.sonatype.org/content/repositories/comvertispan-1082</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
     <profiles>
         <profile>

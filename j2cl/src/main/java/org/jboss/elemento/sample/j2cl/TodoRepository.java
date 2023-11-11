@@ -27,7 +27,6 @@ import jsinterop.base.Js;
 
 import static elemental2.dom.DomGlobal.console;
 import static elemental2.dom.DomGlobal.window;
-import static org.jboss.elemento.EventType.storage;
 
 public class TodoRepository {
 

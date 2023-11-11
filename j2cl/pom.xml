@@ -36,10 +36,6 @@
             <groupId>org.jboss.elemento</groupId>
             <artifactId>elemento-core</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.gwtproject.core</groupId>
-            <artifactId>gwt-core</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
