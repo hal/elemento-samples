@@ -286,6 +286,7 @@
             <properties>
                 <gwt.draftCompile>false</gwt.draftCompile>
                 <gwt.style>OBFUSCATED</gwt.style>
+                <j2cl.compilationLevel>ADVANCED_OPTIMIZATIONS</j2cl.compilationLevel>
                 <npm.script>prod</npm.script>
             </properties>
         </profile>
