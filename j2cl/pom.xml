@@ -24,7 +24,7 @@
     <parent>
         <groupId>org.jboss.elemento.samples</groupId>
         <artifactId>elemento-samples-parent</artifactId>
-        <version>3</version>
+        <version>4</version>
         <relativePath>../samples-parent/pom.xml</relativePath>
     </parent>
 
