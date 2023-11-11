@@ -28,7 +28,7 @@
 
     <groupId>org.jboss.elemento.samples</groupId>
     <artifactId>elemento-samples</artifactId>
-    <version>2</version>
+    <version>3</version>
     <name>Elemento Samples</name>
     <packaging>pom</packaging>
     <inceptionYear>2022</inceptionYear>
