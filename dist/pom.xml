@@ -36,11 +36,11 @@
             <artifactId>elemento-samples-gwt</artifactId>
             <classifier>resources</classifier>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>${project.groupId}</groupId>-->
-<!--            <artifactId>elemento-samples-j2cl</artifactId>-->
-<!--            <classifier>resources</classifier>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>elemento-samples-j2cl</artifactId>
+            <classifier>resources</classifier>
+        </dependency>
     </dependencies>
 
     <build>
@@ -102,15 +102,15 @@
                                     <overWrite>true</overWrite>
                                     <outputDirectory>${project.build.directory}/samples/gwt</outputDirectory>
                                 </artifactItem>
-<!--                                <artifactItem>-->
-<!--                                    <groupId>${project.groupId}</groupId>-->
-<!--                                    <artifactId>elemento-samples-j2cl</artifactId>-->
-<!--                                    <classifier>resources</classifier>-->
-<!--                                    <version>${project.version}</version>-->
-<!--                                    <type>jar</type>-->
-<!--                                    <overWrite>true</overWrite>-->
-<!--                                    <outputDirectory>${project.build.directory}/samples/j2cl</outputDirectory>-->
-<!--                                </artifactItem>-->
+                                <artifactItem>
+                                    <groupId>${project.groupId}</groupId>
+                                    <artifactId>elemento-samples-j2cl</artifactId>
+                                    <classifier>resources</classifier>
+                                    <version>${project.version}</version>
+                                    <type>jar</type>
+                                    <overWrite>true</overWrite>
+                                    <outputDirectory>${project.build.directory}/samples/j2cl</outputDirectory>
+                                </artifactItem>
                             </artifactItems>
                         </configuration>
                     </execution>
