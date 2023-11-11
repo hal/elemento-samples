@@ -1,24 +1,19 @@
 Manifest-Version: 1.0
-Created-By: Apache Maven 3.8.5
-Built-By: runner
-Build-Jdk: 11.0.17
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
 Specification-Title: Elemento Samples :: J2CL
-Specification-Version: 2.0
+Specification-Version: 3.0
 Specification-Vendor: Red Hat
 Implementation-Title: Elemento Samples :: J2CL
-Implementation-Version: 2
-Implementation-Vendor-Id: org.jboss.elemento.samples
+Implementation-Version: 3
 Implementation-Vendor: Red Hat
-Implementation-URL: http://www.jboss.org/elemento-samples/elemento-sampl
- es-parent/elemento-samples-j2cl
+Implementation-URL: http://www.jboss.org
 Java-Vendor: Eclipse Adoptium
 Java-Version: 11
 Os-Arch: amd64
 Os-Name: Linux
-Os-Version: 5.15.0-1031-azure
-Scm-Connection: scm:git:git@github.com:hal/elemento-samples.git/elemento
- -samples-parent/elemento-samples-j2cl
-Scm-Revision: d0a7b3f31e890a75f516981a682a7c80e79a9a12
-Scm-Url: https://github.com/hal/elemento-samples/elemento-samples-parent
- /elemento-samples-j2cl
+Os-Version: 6.2.0-1015-azure
+Scm-Connection: scm:git:git@github.com:hal/elemento-samples.git
+Scm-Revision: f5f181a489ceb2a6cbda14c52c69272b06032225
+Scm-Url: https://github.com/hal/elemento-samples
 
