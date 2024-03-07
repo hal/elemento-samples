@@ -90,7 +90,6 @@
         <gwt.draftCompile>true</gwt.draftCompile>
         <gwt.style>DETAILED</gwt.style>
         <java.version>11</java.version>
-        <j2cl.compilationLevel>BUNDLE</j2cl.compilationLevel>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.min.version>3.2.5</maven.min.version>
@@ -102,6 +101,7 @@
     <modules>
         <module>bom</module>
         <module>build-config</module>
+        <module>common</module>
         <module>dist</module>
         <module>gwt</module>
         <module>samples-parent</module>
@@ -286,7 +286,6 @@
             <properties>
                 <gwt.draftCompile>false</gwt.draftCompile>
                 <gwt.style>OBFUSCATED</gwt.style>
-                <j2cl.compilationLevel>ADVANCED_OPTIMIZATIONS</j2cl.compilationLevel>
                 <npm.script>prod</npm.script>
             </properties>
         </profile>

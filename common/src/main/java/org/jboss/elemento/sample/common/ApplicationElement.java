@@ -13,22 +13,21 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.gwt.client;
-
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
-
-import org.jboss.elemento.By;
-import org.jboss.elemento.HTMLContainerBuilder;
-import org.jboss.elemento.IsElement;
-import org.jboss.elemento.Key;
+package org.jboss.elemento.sample.common;
 
 import elemental2.dom.Event;
 import elemental2.dom.HTMLButtonElement;
 import elemental2.dom.HTMLElement;
 import elemental2.dom.HTMLInputElement;
 import elemental2.dom.HTMLUListElement;
+import org.jboss.elemento.By;
+import org.jboss.elemento.HTMLContainerBuilder;
+import org.jboss.elemento.IsElement;
+import org.jboss.elemento.Key;
+
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import static org.jboss.elemento.Elements.a;
 import static org.jboss.elemento.Elements.button;
@@ -54,10 +53,10 @@ import static org.jboss.elemento.EventType.click;
 import static org.jboss.elemento.EventType.keydown;
 import static org.jboss.elemento.InputType.checkbox;
 import static org.jboss.elemento.InputType.text;
-import static org.jboss.elemento.sample.gwt.client.Filter.ACTIVE;
-import static org.jboss.elemento.sample.gwt.client.Filter.COMPLETED;
+import static org.jboss.elemento.sample.common.Filter.ACTIVE;
+import static org.jboss.elemento.sample.common.Filter.COMPLETED;
 
-class ApplicationElement implements IsElement<HTMLElement> {
+public class ApplicationElement implements IsElement<HTMLElement> {
 
     private final TodoRepository repository;
     private Filter filter;
@@ -74,7 +73,7 @@ class ApplicationElement implements IsElement<HTMLElement> {
     private final HTMLElement filterCompleted;
     private final HTMLButtonElement clearCompleted;
 
-    ApplicationElement(TodoRepository repository) {
+    public ApplicationElement(TodoRepository repository) {
         this.repository = repository;
         this.root = section().css("todoapp")
                 .add(header().css("header")
@@ -123,6 +122,30 @@ class ApplicationElement implements IsElement<HTMLElement> {
 
     // ------------------------------------------------------ event / token handler
 
+    public void filter(String token) {
+        filter = Filter.parseToken(token);
+        switch (filter) {
+            case ALL:
+                filterAll.classList.add("selected");
+                filterActive.classList.remove("selected");
+                filterCompleted.classList.remove("selected");
+                break;
+            case ACTIVE:
+                filterAll.classList.remove("selected");
+                filterActive.classList.add("selected");
+                filterCompleted.classList.remove("selected");
+                break;
+            case COMPLETED:
+                filterAll.classList.remove("selected");
+                filterActive.classList.remove("selected");
+                filterCompleted.classList.add("selected");
+                break;
+            default:
+                break;
+        }
+        update();
+    }
+
     private void newTodo(Event event) {
         if (Key.Enter.match(event)) {
             String text = newTodo.value.trim();
@@ -149,7 +172,7 @@ class ApplicationElement implements IsElement<HTMLElement> {
 
     private void clearCompleted() {
         Set<String> ids = new HashSet<>();
-        for (Iterator<HTMLElement> iterator = iterator(list); iterator.hasNext();) {
+        for (Iterator<HTMLElement> iterator = iterator(list); iterator.hasNext(); ) {
             HTMLElement li = iterator.next();
             if (li.classList.contains("completed")) {
                 String id = String.valueOf(li.dataset.get("item"));
@@ -160,30 +183,6 @@ class ApplicationElement implements IsElement<HTMLElement> {
             }
         }
         repository.removeAll(ids);
-        update();
-    }
-
-    void filter(String token) {
-        filter = Filter.parseToken(token);
-        switch (filter) {
-            case ALL:
-                filterAll.classList.add("selected");
-                filterActive.classList.remove("selected");
-                filterCompleted.classList.remove("selected");
-                break;
-            case ACTIVE:
-                filterAll.classList.remove("selected");
-                filterActive.classList.add("selected");
-                filterCompleted.classList.remove("selected");
-                break;
-            case COMPLETED:
-                filterAll.classList.remove("selected");
-                filterActive.classList.remove("selected");
-                filterCompleted.classList.add("selected");
-                break;
-            default:
-                break;
-        }
         update();
     }
 

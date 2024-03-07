@@ -13,27 +13,34 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.gwt.client;
-
-import org.gwtproject.event.shared.HandlerRegistration;
-import org.gwtproject.event.shared.HandlerRegistrations;
-import org.jboss.elemento.Attachable;
-import org.jboss.elemento.IsElement;
-import org.jboss.elemento.Key;
+package org.jboss.elemento.sample.common;
 
 import elemental2.dom.HTMLButtonElement;
 import elemental2.dom.HTMLElement;
 import elemental2.dom.HTMLInputElement;
 import elemental2.dom.KeyboardEvent;
 import elemental2.dom.MutationRecord;
+import org.gwtproject.event.shared.HandlerRegistration;
+import org.gwtproject.event.shared.HandlerRegistrations;
+import org.jboss.elemento.Attachable;
+import org.jboss.elemento.IsElement;
+import org.jboss.elemento.Key;
 
-import static org.jboss.elemento.Elements.*;
+import static org.jboss.elemento.Elements.button;
+import static org.jboss.elemento.Elements.div;
 import static org.jboss.elemento.Elements.input;
-import static org.jboss.elemento.EventType.*;
+import static org.jboss.elemento.Elements.label;
+import static org.jboss.elemento.Elements.li;
+import static org.jboss.elemento.EventType.bind;
+import static org.jboss.elemento.EventType.blur;
+import static org.jboss.elemento.EventType.change;
+import static org.jboss.elemento.EventType.click;
+import static org.jboss.elemento.EventType.dblclick;
+import static org.jboss.elemento.EventType.keydown;
 import static org.jboss.elemento.InputType.checkbox;
 import static org.jboss.elemento.InputType.text;
 
-class TodoElement implements IsElement<HTMLElement>, Attachable {
+public class TodoElement implements IsElement<HTMLElement>, Attachable {
 
     private final Todo item;
     private final ApplicationElement application;
@@ -48,7 +55,7 @@ class TodoElement implements IsElement<HTMLElement>, Attachable {
 
     private boolean escape;
 
-    TodoElement(ApplicationElement application, TodoRepository repository, Todo item) {
+    public TodoElement(ApplicationElement application, TodoRepository repository, Todo item) {
         this.application = application;
         this.repository = repository;
         this.item = item;
@@ -118,7 +125,7 @@ class TodoElement implements IsElement<HTMLElement>, Attachable {
 
     private void blur() {
         String value = summary.value.trim();
-        if (value.length() == 0) {
+        if (value.isEmpty()) {
             destroy();
         } else {
             root.classList.remove("editing");

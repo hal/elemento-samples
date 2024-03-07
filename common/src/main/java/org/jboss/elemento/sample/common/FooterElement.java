@@ -13,22 +13,21 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.j2cl;
-
-import org.jboss.elemento.IsElement;
+package org.jboss.elemento.sample.common;
 
 import elemental2.dom.HTMLElement;
+import org.jboss.elemento.IsElement;
 
 import static org.jboss.elemento.Elements.a;
 import static org.jboss.elemento.Elements.footer;
 import static org.jboss.elemento.Elements.p;
 import static org.jboss.elemento.Elements.span;
 
-class FooterElement implements IsElement<HTMLElement> {
+public class FooterElement implements IsElement<HTMLElement> {
 
     private final HTMLElement root;
 
-    FooterElement() {
+    public FooterElement() {
         root = footer().css("info")
                 .add(p().textContent("Double-click to edit a todo"))
                 .add(p().add(span().textContent("Created by" + " "))

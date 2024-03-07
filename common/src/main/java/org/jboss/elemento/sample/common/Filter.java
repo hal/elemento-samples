@@ -13,7 +13,7 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.gwt.client;
+package org.jboss.elemento.sample.common;
 
 public enum Filter {
     ALL("#/"), ACTIVE("#/active"), COMPLETED("#/completed");

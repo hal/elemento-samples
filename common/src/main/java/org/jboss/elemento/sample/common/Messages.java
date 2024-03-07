@@ -13,14 +13,14 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.j2cl;
+package org.jboss.elemento.sample.common;
 
 import org.gwtproject.safehtml.shared.SafeHtml;
 import org.gwtproject.safehtml.shared.SafeHtmlUtils;
 
 public interface Messages {
 
-    static SafeHtml items(int items) {
+    public static SafeHtml items(int items) {
         String message;
         switch (items) {
             case 0:

@@ -15,6 +15,10 @@
  */
 package org.jboss.elemento.sample.j2cl;
 
+import org.jboss.elemento.sample.common.ApplicationElement;
+import org.jboss.elemento.sample.common.FooterElement;
+import org.jboss.elemento.sample.common.TodoRepository;
+
 import jsinterop.annotations.JsType;
 
 import static elemental2.dom.DomGlobal.location;
@@ -24,14 +28,13 @@ import static org.jboss.elemento.EventType.bind;
 import static org.jboss.elemento.EventType.hashchange;
 
 @JsType
+@SuppressWarnings({ "unused", "ConfusingMainMethod" })
 public class Main {
 
     public static void main() {
-        TodoRepository repository = new TodoRepository();
-        ApplicationElement application = new ApplicationElement(repository);
-        FooterElement footer = new FooterElement();
+        ApplicationElement application = new ApplicationElement(new TodoRepository());
 
-        body().add(application).add(footer);
+        body().add(application).add(new FooterElement());
         bind(window, hashchange, event -> application.filter(location.hash));
         application.filter(location.hash);
     }

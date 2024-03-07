@@ -15,6 +15,10 @@
  */
 package org.jboss.elemento.sample.gwt.client;
 
+import org.jboss.elemento.sample.common.ApplicationElement;
+import org.jboss.elemento.sample.common.FooterElement;
+import org.jboss.elemento.sample.common.TodoRepository;
+
 import com.google.gwt.core.client.EntryPoint;
 
 import static elemental2.dom.DomGlobal.location;

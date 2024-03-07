@@ -13,17 +13,17 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-package org.jboss.elemento.sample.j2cl;
-
-import java.util.Collection;
-import java.util.LinkedHashMap;
-import java.util.Set;
+package org.jboss.elemento.sample.common;
 
 import elemental2.core.Global;
 import elemental2.core.JsArray;
 import elemental2.webstorage.Storage;
 import elemental2.webstorage.WebStorageWindow;
 import jsinterop.base.Js;
+
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.Set;
 
 import static elemental2.dom.DomGlobal.console;
 import static elemental2.dom.DomGlobal.window;

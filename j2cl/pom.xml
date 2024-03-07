@@ -31,13 +31,6 @@
     <artifactId>elemento-samples-j2cl</artifactId>
     <name>Elemento Samples :: J2CL</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.elemento</groupId>
-            <artifactId>elemento-core</artifactId>
-        </dependency>
-    </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -80,7 +73,6 @@
                 <groupId>com.vertispan.j2cl</groupId>
                 <artifactId>j2cl-maven-plugin</artifactId>
                 <configuration>
-                    <compilationLevel>${j2cl.compilationLevel}</compilationLevel>
                     <initialScriptFilename>todo.j2cl.js</initialScriptFilename>
                     <webappDirectory>${project.build.directory}/todo</webappDirectory>
                 </configuration>
